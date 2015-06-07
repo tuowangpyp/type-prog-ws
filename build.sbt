@@ -4,17 +4,17 @@ organization := "com.joescii"
 
 version := "0.1-SNAPSHOT"
 
-scalaVersion := "2.11.5"
+scalaVersion := "2.11.6"
 
 resolvers ++= Seq(
-  "sonatype-snapshots" at "http://oss.sonatype.org/content/repositories/snapshots",
-  "sonatype-releases"  at "http://oss.sonatype.org/content/repositories/releases"
+  Resolver.sonatypeRepo("releases"),
+  Resolver.sonatypeRepo("snapshots")
 )
 
 libraryDependencies ++= {
   Seq(
     "org.scalatest"  %% "scalatest"   % "2.2.3" % "test",
-    "com.chuusai"    %  "shapeless"   % "2.2.1" % "test"
+    "com.chuusai"    %% "shapeless"   % "2.2.1" % "test"
   )
 }
 
