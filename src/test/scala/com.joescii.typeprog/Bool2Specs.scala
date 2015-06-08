@@ -12,4 +12,6 @@ object Bool2Specs {
   illTyped("implicitly[TrueType#And[FalseType] =:= TrueType]")
   illTyped("implicitly[FalseType#And[TrueType] =:= TrueType]")
   illTyped("implicitly[FalseType#And[FalseType] =:= TrueType]")
+
+  // TODO: Di you implement And without touching TrueType or FalseType? It can be done :)
 }
