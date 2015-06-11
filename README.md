@@ -67,3 +67,23 @@ Were you able to implement it by only updating the `BoolType` trait?
 Now implement the `Imp` type, short for _implies_.
 
 Again, you should be able to add `Imp` without changing `TrueType` or `FalseType`.
+
+## Nat Exercises
+
+The next set of exercises covers the `Nat` type introduced in the talk.
+Here we use the [Peano Axioms](http://en.wikipedia.org/wiki/Peano_axioms) to define natural numbers.
+
+### nat-1
+
+`git checkout nat-1`
+The types `Nat`, `Nat0`, and `NatN` are stubbed out.
+`Nat0` and `NatN` need to be subtypes of `Nat`.
+`NatN` should recursively build the natural numbers.
+`Nat` should declare a `plus` type for addition which the two subtypes implement.
+Try it yourself first, but if you get stuck see [Peano Arithmetic](http://en.wikipedia.org/wiki/Peano_axioms#Arithmetic) for a hint on addition.
+
+### nat-2
+
+`git checkout nat-2`
+This time implement a `times` type for multiplication.
+Again, see [Peano Arithmetic](http://en.wikipedia.org/wiki/Peano_axioms#Arithmetic) if you get stuck.
