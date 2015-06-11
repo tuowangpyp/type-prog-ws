@@ -3,15 +3,15 @@ package com.joescii.typeprog
 import shapeless.test.illTyped
 
 object Bool2Specs {
-  implicitly[TrueType#And[TrueType] =:= TrueType]
-  implicitly[TrueType#And[FalseType] =:= FalseType]
-  implicitly[FalseType#And[TrueType] =:= FalseType]
-  implicitly[FalseType#And[FalseType] =:= FalseType]
+  implicitly[True#And[True] =:= True]
+  implicitly[True#And[False] =:= False]
+  implicitly[False#And[True] =:= False]
+  implicitly[False#And[False] =:= False]
 
-  illTyped("implicitly[TrueType#And[TrueType] =:= FalseType]")
-  illTyped("implicitly[TrueType#And[FalseType] =:= TrueType]")
-  illTyped("implicitly[FalseType#And[TrueType] =:= TrueType]")
-  illTyped("implicitly[FalseType#And[FalseType] =:= TrueType]")
+  illTyped("implicitly[True#And[True] =:= False]")
+  illTyped("implicitly[True#And[False] =:= True]")
+  illTyped("implicitly[False#And[True] =:= True]")
+  illTyped("implicitly[False#And[False] =:= True]")
 
-  // TODO: Di you implement And without touching TrueType or FalseType? It can be done :)
+  // TODO: Di you implement And without touching True or False? It can be done :)
 }
