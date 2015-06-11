@@ -44,13 +44,14 @@ The branch will contain a test source file to guide what to build next.
 
 ## Bool Exercises
 
-The first set of exercises covers the `Bool` type shown during the introductory talk.
+The first set of exercises covers the `BoolType` type shown during the introductory talk.
 
 ### bool-1
 
 Invoke `git checkout bool-1` to grab the first exercise.
 Run `sbt test:compile` and you will see it fails to compile.
-You will see that there is an incomplete implementation of `Bool` in `src/main/scala/com.joescii.typeprog/Bool.scala`.
+You will see that there is an incomplete implementation of `Bool` in `src/main/scala/com.joescii.typeprog/Bool.scala`
+(We're dropping `Type` from the name since that was to emphasize the similarities to the value-level dual).
 Open `src/test/scala/com.joescii.typeprog/Bool1Specs.scala` and you will see it expects `Not` and `Or` types to be defined correctly.
 Update `Bool` to make the compiler happy!
 
@@ -70,7 +71,8 @@ Again, you should be able to add `Imp` without changing `True` or `False`.
 
 ## Nat Exercises
 
-The next set of exercises covers the `Nat` type introduced in the talk.
+The next set of exercises covers the `NatType` type introduced in the talk
+(Again dropping `Type` as before).
 Here we use the [Peano Axioms](http://en.wikipedia.org/wiki/Peano_axioms) to define natural numbers.
 
 ### nat-1
