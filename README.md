@@ -35,3 +35,55 @@ You should get a passing test and a failing test with the following output.
 2. Correct the broken test.
 3. Rerun `test` and verify that you now have two green tests.
 
+You are now ready to begin the workshop!
+
+## Workshop Exercises
+
+Each exercise is delivered from the repo in a branch.
+The branch will contain a test source file to guide what to build next.
+
+## Bool Exercises
+
+The first set of exercises covers the `Bool` type shown during the introductory talk.
+
+### bool-1
+
+Invoke `git checkout bool-1` to grab the first exercise.
+Run `sbt test:compile` and you will see it fails to compile.
+You will see that there is an incomplete implementation of `Bool` in `src/main/scala/com.joescii.typeprog/Bool.scala`.
+Open `src/test/scala/com.joescii.typeprog/Bool1Specs.scala` and you will see it expects `Not` and `Or` types to be defined correctly.
+Update `Bool` to make the compiler happy!
+
+### bool-2
+
+`git checkout bool-2`
+This time you need to implement the `And` type.
+
+Were you able to implement it by only updating the `Bool` trait?
+
+### bool-3
+
+`git checkout bool-3`
+Now implement the `Imp` type, short for _implies_.
+
+Again, you should be able to add `Imp` without changing `True` or `False`.
+
+## Nat Exercises
+
+The next set of exercises covers the `Nat` type introduced in the talk.
+Here we use the [Peano Axioms](http://en.wikipedia.org/wiki/Peano_axioms) to define natural numbers.
+
+### nat-1
+
+`git checkout nat-1`
+The types `Nat`, `Nat0`, and `NatN` are stubbed out.
+`Nat0` and `NatN` need to be subtypes of `Nat`.
+`NatN` should recursively build the natural numbers.
+`Nat` should declare a `plus` type for addition which the two subtypes implement.
+Try it yourself first, but if you get stuck see [Peano Arithmetic](http://en.wikipedia.org/wiki/Peano_axioms#Arithmetic) for a hint on addition.
+
+### nat-2
+
+`git checkout nat-2`
+This time implement a `times` type for multiplication.
+Again, see [Peano Arithmetic](http://en.wikipedia.org/wiki/Peano_axioms#Arithmetic) if you get stuck.
