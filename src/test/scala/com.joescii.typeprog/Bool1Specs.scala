@@ -3,25 +3,25 @@ package com.joescii.typeprog
 import shapeless.test.illTyped
 
 object Bool1Specs {
-  implicitly[TrueType  =:= TrueType]
-  implicitly[FalseType =:= FalseType]
+  implicitly[True  =:= True]
+  implicitly[False =:= False]
 
-  implicitly[TrueType#Not  =:= FalseType]
-  implicitly[FalseType#Not =:= TrueType]
+  implicitly[True#Not  =:= False]
+  implicitly[False#Not =:= True]
 
-  implicitly[TrueType#Or[TrueType] =:= TrueType]
-  implicitly[TrueType#Or[FalseType] =:= TrueType]
-  implicitly[FalseType#Or[TrueType] =:= TrueType]
-  implicitly[FalseType#Or[FalseType] =:= FalseType]
+  implicitly[True#Or[True] =:= True]
+  implicitly[True#Or[False] =:= True]
+  implicitly[False#Or[True] =:= True]
+  implicitly[False#Or[False] =:= False]
 
-  illTyped("implicitly[TrueType  =:= FalseType]")
-  illTyped("implicitly[FalseType =:= TrueType]")
+  illTyped("implicitly[True  =:= False]")
+  illTyped("implicitly[False =:= True]")
 
-  illTyped("implicitly[TrueType#Not  =:= TrueType]")
-  illTyped("implicitly[FalseType#Not =:= FalseType]")
+  illTyped("implicitly[True#Not  =:= True]")
+  illTyped("implicitly[False#Not =:= False]")
 
-  illTyped("implicitly[TrueType#Or[TrueType] =:= FalseType]")
-  illTyped("implicitly[TrueType#Or[FalseType] =:= FalseType]")
-  illTyped("implicitly[FalseType#Or[TrueType] =:= FalseType]")
-  illTyped("implicitly[FalseType#Or[FalseType] =:= TrueType]")
+  illTyped("implicitly[True#Or[True] =:= False]")
+  illTyped("implicitly[True#Or[False] =:= False]")
+  illTyped("implicitly[False#Or[True] =:= False]")
+  illTyped("implicitly[False#Or[False] =:= True]")
 }
