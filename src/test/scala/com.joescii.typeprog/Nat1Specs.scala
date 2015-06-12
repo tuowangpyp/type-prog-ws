@@ -1,5 +1,7 @@
 package com.joescii.typeprog
 
+import shapeless.test.illTyped
+
 object Nat1Specs {
   type Nat1 = NatN[Nat0]
   type Nat2 = NatN[Nat1]
