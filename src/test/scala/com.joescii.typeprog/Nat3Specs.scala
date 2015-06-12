@@ -5,5 +5,5 @@ object Nat3Specs {
   type Nat1 = NatN[Nat0]
   type Nat2 = NatN[Nat1]
 
-  implicitly[Nat2 =:= Nat2#exp[Nat2#exp[Nat2#exp[Nat2#exp[Nat2]]]]]
+  val a:Nat2#times[Nat2]#times[Nat2]#times[Nat2]#times[Nat2]#times[Nat2]#times[Nat2]#times[Nat2]#times[Nat2]#times[Nat2] = null
 }
