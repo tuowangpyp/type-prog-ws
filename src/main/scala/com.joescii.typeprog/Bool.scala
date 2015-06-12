@@ -3,6 +3,7 @@ package com.joescii.typeprog
 sealed trait Bool {
   type Not <: Bool
   type Or[That <: Bool] <: Bool
+  type And[That <: Bool] = this.type#Not#Or[That#Not]#Not
 }
 sealed trait True extends Bool {
   type Not = False
