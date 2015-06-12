@@ -90,3 +90,8 @@ Try it yourself first, but if you get stuck see [Peano Arithmetic](http://en.wik
 `git merge origin/nat-2`
 This time implement a `times` type for multiplication.
 Again, see [Peano Arithmetic](http://en.wikipedia.org/wiki/Peano_axioms#Arithmetic) if you get stuck.
+
+### nat-3
+`git merge origin/nat-3`
+Now let's see if you can break the compiler.
+Make a recursive type that causes scalac to throw a `java.lang.StackOverflowError` because it's just too deep.
