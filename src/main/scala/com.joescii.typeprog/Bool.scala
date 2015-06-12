@@ -4,6 +4,7 @@ sealed trait Bool {
   type Not <: Bool
   type Or[That <: Bool] <: Bool
   type And[That <: Bool] = this.type#Not#Or[That#Not]#Not
+  type Imp[That <: Bool] = this.type#Not#Or[That]
 }
 sealed trait True extends Bool {
   type Not = False
