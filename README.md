@@ -111,3 +111,10 @@ You've been provided with stubbed out trait, base object, and case class.
 It is up to you to complete their type definitions and implement both cons and addition.
 See [Vector Addition](http://mathworld.wolfram.com/VectorAddition.html) if you need a refresher on the definition.
 
+### vect-2
+
+`git merge origin/vect-2`
+Now it's time to make that `IllegalArgumentException` a compile-time check.
+First, comment-out the `intercept` block in `Vect1Specs` as it will no longer be applicable, nor will it compile.
+Update the `Vector` trait to take a `Nat` type parameter for its size.
+Now go throughout `Vector.scala` adding the appropriate `Nat` type parameter to each usage of `Vector`.
