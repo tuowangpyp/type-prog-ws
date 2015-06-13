@@ -1,23 +1,20 @@
 package com.joescii.typeprog
 
-sealed trait Vector {
+sealed trait Vector[Size <: Nat] {
   def size:Int
-  def ::(head:Int):Vector = NonEmptyVector(head, this)
-  def +(that:Vector):Vector
+  def ::(head:Int):Vector[NatN[Size]] = NonEmptyVector(head, this)
+  def +(that:Vector[Size]):Vector[Size]
 }
 
-case object VNil extends Vector  {
+case object VNil extends Vector[Nat0] {
   val size = 0
-  def +(that:Vector) = {
-    require(that == this)
-    VNil
-  }
+  def +(that:Vector[Nat0]) = this
 }
 
-case class NonEmptyVector(head:Int, tail:Vector) extends Vector {
+case class NonEmptyVector[TailSize <: Nat](head:Int, tail:Vector[TailSize]) extends Vector[NatN[TailSize]] {
+  type Size = NatN[TailSize]
   val size = 1 + tail.size
-  def +(that:Vector) = {
-    require(that.size == this.size)
+  def +(that:Vector[Size]) = {
     that match {
       case NonEmptyVector(head2, tail2) => NonEmptyVector(head + head2, tail + tail2)
     }
