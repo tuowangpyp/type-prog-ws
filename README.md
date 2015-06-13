@@ -95,3 +95,19 @@ Again, see [Peano Arithmetic](http://en.wikipedia.org/wiki/Peano_axioms#Arithmet
 `git merge origin/nat-3`
 Now let's see if you can break the compiler.
 Make a recursive type that causes scalac to throw a `java.lang.StackOverflowError` because it's just too deep.
+Once you're done with this exercise, you'll of course want to comment out the successful line of code.
+
+## Vect Exercises
+
+Now we begin to put our work to practical use.
+We will implement a `Vector` as shown in the introductory talk.
+It is a `Vector` in the mathematical/linear algebra sense.
+
+### vect-1
+
+`git merge origin/vect-1`
+We will start be implementing the unsafe `Vector` shown in the talk.
+You've been provided with stubbed out trait, base object, and case class.
+It is up to you to complete their type definitions and implement both cons and addition.
+See [Vector Addition](http://mathworld.wolfram.com/VectorAddition.html) if you need a refresher on the definition.
+
