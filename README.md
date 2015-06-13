@@ -100,6 +100,8 @@ Again, see [Peano Arithmetic](http://en.wikipedia.org/wiki/Peano_axioms#Arithmet
 Now let's see if you can break the compiler.
 Make a recursive type that causes scalac to throw a `java.lang.StackOverflowError` because it's just too deep.
 Once you're done with this exercise, you'll of course want to comment out the successful line of code.
+Note also that if you're using Intellij or Scala-IDE, then you'll likely crash it too.
+I recommend switching to a text editor for this one.
 
 ## Vect Exercises
 
