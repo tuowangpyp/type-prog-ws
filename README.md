@@ -7,6 +7,11 @@ Type Programming in Scala 101 Workshop
 2. sbt 0.13.x
 3. git
 
+### No git?
+
+If you are unable to have git on your system, we can work around it.
+TBD.
+
 ## Environment Check
 
 1. Fork this repo.
