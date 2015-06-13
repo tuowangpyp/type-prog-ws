@@ -10,7 +10,7 @@ Type Programming in Scala 101 Workshop
 ## Environment Check
 
 1. Fork this repo.
-2. Clone locally.
+2. `git clone https://github.com/[USERNAME]/type-prog-ws.git`
 3. `sbt`
 4. `> update`
 5. `> test`
@@ -42,6 +42,10 @@ You are now ready to begin the workshop!
 
 Each exercise is delivered from the repo in a branch.
 The branch will contain a test source file to guide what to build next.
+There is also a complementary solution branch for each exercise with the suffix `-soln`.
+For instance, the first exercise is `bool-1` and a solution is in branch `bool-1-soln`.
+If you want to view solutions as you go, I recommend checking out the `type-prog-ws` repo into a second local directory to avoid merge conflicts with your own solutions.
+E.g. `git clone https://github.com/[USERNAME]/type-prog-ws.git type-prog-ws-solutions`
 
 ## Bool Exercises
 
