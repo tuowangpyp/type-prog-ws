@@ -13,8 +13,11 @@ class Vect3Specs extends FlatSpec with Matchers {
   // Once you decide that, update the test below and implement the function.
   // Rename it to something more meaningful.
 
-  val v1 = (5 :: 2 :: VNil)
-  val v2 = (4 :: 1 :: 3 :: VNil)
+  "The mystery Vector function" should "compute something reasonable" in {
+    val v1 = (5 :: 2 :: VNil)
+    val v2 = (4 :: 1 :: 3 :: VNil)
+    val v3 = ???
 
-  (v1 ?? v2) should be (???)
+    (v1 ?? v2) should equal (v3)
+  }
 }
