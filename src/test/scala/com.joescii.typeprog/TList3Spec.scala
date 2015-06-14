@@ -11,5 +11,5 @@ object TList3Spec {
   type List3 = Nat2 :: Nat3 :: Nat4 :: TNil
 
   implicitly[List1#map[({type F[i <: Nat] = NatN[i]})#F] =:= List2]
-  implicitly[List1#map[({type F[i <: Nat] = NatN[NatN[i]])#F] =:= List3]
+  implicitly[List1#map[({type F[i <: Nat] = NatN[NatN[i]]})#F] =:= List3]
 }
