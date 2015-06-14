@@ -155,7 +155,7 @@ The `Vect3Spec` has the details in comments.
 
 Let's take a dive back into the strange world of type programming.
 Now we will create a type called `TypeList`.
-It can build an arbitrary list of any types.
+It can build an arbitrary list of types.
 When those types are our `Nat` types, then we effectively have lists of naturals in the type system.
 Our playing around with this type will conclude with brushing up against type lambdas.
 
