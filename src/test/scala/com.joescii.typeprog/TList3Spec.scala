@@ -5,9 +5,8 @@ object TList3Spec {
   type Nat2 = NatN[Nat1]
   type Nat3 = NatN[Nat2]
 
-  type List1  = Nat0 :: Nat1 :: Nat1 :: TNil
-  type List2  = Nat1 :: Nat2 :: Nat0 :: TNil
-  type ZipSum = Nat1 :: Nat3 :: Nat1 :: TNil
+  type List1 = Nat0 :: Nat1 :: Nat2 :: TNil
+  type List2 = Nat1 :: Nat2 :: Nat3 :: TNil
 
-  implicitly[List1#zipsum[List2] =:= ZipSum]
+  implicitly[List1#map[({type F[i <: Nat] = NatN[i]})#F] =:= List2]
 }
