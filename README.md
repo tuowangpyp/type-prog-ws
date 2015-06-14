@@ -146,3 +146,35 @@ This time we're going to observe the power of types in documenting code.
 We will define a function mysteriously named `??` using our types.
 The types will lead us to a reasonable implementation of the function `??`.
 The `Vect3Spec` has the details in comments.
+
+## TypeList Exercises
+
+Let's take a dive back into the strange world of type programming.
+Now we will create a type called `TypeList`.
+It can build an arbitrary list of any types.
+When those types are our `Nat` types, then we effectively have lists of naturals in the type system.
+Our playing around with this type will conclude with brushing up against type lambdas.
+
+### tlist-1
+
+`git merge origin/tlist-1`
+
+First things first, build a `TypeList`.
+For fun, our `TypeList` includes a `size` type which represents the length of the `TypeList`.
+As usual, the base types are stubbed out.
+Once you are done, you should be able to compile the test code.
+
+### tlist-2
+
+`git merge origin/tlist-2`
+
+Since we have a list, we should be able to do operations like `reduce`.
+You may make the simplifying assumption that `TNil#reduce =:= Nat0`.
+
+### tlist-3
+
+`git merge origin/tlist-3`
+
+Now it's time to face the ugly syntax which is a type lambda.
+There really is no syntax for this.
+You may notice that it is basically an anonymous structural type, with the declared type called at the end.
