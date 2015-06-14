@@ -68,6 +68,7 @@ Update `Bool` to make the compiler happy!
 ### bool-2
 
 `git merge origin/bool-2`
+
 This time you need to implement the `And` type.
 
 Were you able to implement it by only updating the `Bool` trait?
@@ -75,6 +76,7 @@ Were you able to implement it by only updating the `Bool` trait?
 ### bool-3
 
 `git merge origin/bool-3`
+
 Now implement the `Imp` type, short for _implies_.
 
 Again, you should be able to add `Imp` without changing `True` or `False`.
@@ -88,6 +90,7 @@ Here we use the [Peano Axioms](http://en.wikipedia.org/wiki/Peano_axioms) to def
 ### nat-1
 
 `git merge origin/nat-1`
+
 The types `Nat`, `Nat0`, and `NatN` are stubbed out.
 `Nat0` and `NatN` need to be subtypes of `Nat`.
 `NatN` should recursively build the natural numbers.
@@ -97,11 +100,14 @@ Try it yourself first, but if you get stuck see [Peano Arithmetic](http://en.wik
 ### nat-2
 
 `git merge origin/nat-2`
+
 This time implement a `times` type for multiplication.
 Again, see [Peano Arithmetic](http://en.wikipedia.org/wiki/Peano_axioms#Arithmetic) if you get stuck.
 
 ### nat-3
+
 `git merge origin/nat-3`
+
 Now let's see if you can break the compiler.
 Make a recursive type that causes scalac to throw a `java.lang.StackOverflowError` because it's just too deep.
 Once you're done with this exercise, you'll of course want to comment out the successful line of code.
@@ -117,6 +123,7 @@ It is a `Vector` in the mathematical/linear algebra sense.
 ### vect-1
 
 `git merge origin/vect-1`
+
 We will start be implementing the unsafe `Vector` shown in the talk.
 You've been provided with stubbed out trait, base object, and case class.
 It is up to you to complete their type definitions and implement both cons and addition.
@@ -125,6 +132,7 @@ See [Vector Addition](http://mathworld.wolfram.com/VectorAddition.html) if you n
 ### vect-2
 
 `git merge origin/vect-2`
+
 Now it's time to make that `IllegalArgumentException` a compile-time check.
 First, comment-out the `intercept` block in `Vect1Specs` as it will no longer be applicable, nor will it compile.
 Update the `Vector` trait to take a `Nat` type parameter for its size.
