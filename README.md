@@ -47,6 +47,9 @@ You are now ready to begin the workshop!
 
 Each exercise is delivered from the repo in a branch.
 The branch will contain a test source file to guide what to build next.
+Please feel free to add your own tests as needed.
+You may find you need to pass some intermediate steps before trying to satisfy the tests I've provided.
+
 There is also a complementary solution branch for each exercise with the suffix `-soln`.
 For instance, the first exercise is `bool-1` and a solution is in branch `bool-1-soln`.
 If you want to view solutions as you go, I recommend checking out the `type-prog-ws` repo into a second local directory to avoid merge conflicts with your own solutions.
