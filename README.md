@@ -177,4 +177,5 @@ You may make the simplifying assumption that `TNil#reduce =:= Nat0`.
 
 Now it's time to face the ugly syntax which is a type lambda.
 There really is no syntax for this.
-You may notice that it is basically an anonymous structural type, with the declared type called at the end.
+The comments in the test code should guide you through understanding this obtuse syntax.
+There is also a hint as nothing you have seen thus far will help you know how to correctly express this concept.
