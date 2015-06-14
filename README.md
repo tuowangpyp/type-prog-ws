@@ -129,3 +129,12 @@ Now it's time to make that `IllegalArgumentException` a compile-time check.
 First, comment-out the `intercept` block in `Vect1Specs` as it will no longer be applicable, nor will it compile.
 Update the `Vector` trait to take a `Nat` type parameter for its size.
 Now go throughout `Vector.scala` adding the appropriate `Nat` type parameter to each usage of `Vector`.
+
+### vect-3
+
+`git merge origin/vect-3`
+
+This time we're going to observe the power of types in documenting code.
+We will define a function mysteriously named `??` using our types.
+The types will lead us to a reasonable implementation of the function `??`.
+The `Vect3Spec` has the details in comments.
