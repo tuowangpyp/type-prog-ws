@@ -25,4 +25,8 @@ object TList3Spec {
 
   implicitly[List1#map[({type F[i <: Nat] = NatN[NatN[i]]})#F] =:= List3]
   implicitly[List1#map[({type F[i <: Nat] = i#plus[Nat2]})#F]  =:= List3]
+
+  // HINT:
+  // Thus far we have always accepted Nat types as type parameters with the syntax t[That <: Nat].
+  // You can accept a type constructor/lambda with t[F[_] <: Nat] and apply F to existing Nat types.
 }
