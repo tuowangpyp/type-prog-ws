@@ -1,10 +1,21 @@
 package com.joescii.typeprog
 
-object TList5Spec {
-  // See if you can parameterize TypeList with the contained type, so we can contain either Nat or Bool.
+import TypeLists._
 
-  // Some hints:
-  //   1. Comment-out reduce because it won't make sense any longer.
-  //   2. :: will now be ugly because it has 3 parameters and TNil is awkward with a parameter. Consider creating
-  //      specialized types like :+: for Nat's :: and NTNil for instance in a companion object.
+object TList5Spec {
+  type List1 = False :|: True :|: False :|: BTNil
+  type List2 = False :|: False :|: False :|: BTNil
+  type List3 = True :|: True :|: BTNil
+
+  implicitly[List1#size =:= List2#size]
+
+  type Or = ({type F[a <: Bool, b <: Bool] = a#Or[b]})
+  type And = ({type F[a <: Bool, b <: Bool] = a#And[b]})
+
+  implicitly[List1#fold[False, Or#F] =:= True]
+  implicitly[List2#fold[False, Or#F] =:= False]
+  implicitly[List3#fold[False, Or#F] =:= True]
+  implicitly[List1#fold[True, And#F] =:= False]
+  implicitly[List2#fold[True, And#F] =:= False]
+  implicitly[List3#fold[True, And#F] =:= True]
 }
