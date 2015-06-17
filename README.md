@@ -191,3 +191,12 @@ There is also a hint as nothing you have seen thus far will help you know how to
 
 If we can have a type function of one parameter, then we can have a function of two parameters.
 Now we will implement `fold` which takes an initial accumulator value and a function of two types.
+
+### tlist-5
+
+`git merge origin/tlist-5`
+
+We called this thing `TypeList` but it only contains a list of types of type `Nat`.
+Let's parameterize it to take any type, particularly either `Nat` or `Bool`.
+Things may get really ugly here, so look use the hints in the comments.
+Regardless of approach, this will be quite a breaking change.
