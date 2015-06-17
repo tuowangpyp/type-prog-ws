@@ -180,6 +180,14 @@ You may make the simplifying assumption that `TNil#reduce =:= Nat0`.
 `git merge origin/tlist-3`
 
 Now it's time to face the ugly syntax which is a type lambda.
-There really is no syntax for this.
+There really is no syntax for this, actually.
+It's more of a hack.
 The comments in the test code should guide you through understanding this obtuse syntax.
 There is also a hint as nothing you have seen thus far will help you know how to correctly express this concept.
+
+### tlist-4
+
+`git merge origin/tlist-4`
+
+If we can have a type function of one parameter, then we can have a function of two parameters.
+Now we will implement `fold` which takes an initial accumulator value and a function of two types.
