@@ -1,6 +1,13 @@
 # type-prog-ws
 Type Programming in Scala 101 Workshop
 
+## Objective
+
+The primary objective here is to have fun.
+In the process of having fun, the intermediate Scala developer will become much more comfortable with the riches of the Scala type system.
+The knowledge gained in these exercises will not be directly applicable, but should give the developer much more confidence when reading complicated type acrobatics in advanced Scala code bases.
+So have a seat, fire up your development environment, and prepare to be amazed by the Scala type system.
+
 ## System Requirements
 
 1. JDK 6.0+
