@@ -4,7 +4,7 @@ import org.scalatest.{ FlatSpec, Matchers }
 
 class Vect3Specs extends FlatSpec with Matchers {
   // Now add the following mysteriously-named function signature to your Vector:
-  // def ??[ThatSize <: Nat](that:Vector[ThatSize]):Vector[Size#plus[ThatSize]]
+  // def ??[ThatSize <: Nat](that:Vector[ThatSize]):Vector[Size + ThatSize]
 
   // The name of this new function is purposefully obfuscated.
   // However, the types severely limit the possible implementations.
