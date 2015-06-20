@@ -7,4 +7,6 @@ object Nat2Specs {
   type Nat6 = NatN[NatN[NatN[Nat3]]]
 
   implicitly[Nat3#times[Nat2] =:= Nat6]
+
+  implicitly[Nat3 * Nat2 =:= Nat6]
 }
