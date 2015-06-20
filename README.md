@@ -116,6 +116,7 @@ The types `Nat`, `Nat0`, and `NatN` are stubbed out.
 `NatN` should recursively build the natural numbers.
 `Nat` should declare a `plus` type for addition which the two subtypes implement.
 Try it yourself first, but if you get stuck see [Peano Arithmetic](http://en.wikipedia.org/wiki/Peano_axioms#Arithmetic) for a hint on addition.
+Once you have `plus` worked out, make a `+` operator.
 
 ### nat-2
 
@@ -123,6 +124,7 @@ Try it yourself first, but if you get stuck see [Peano Arithmetic](http://en.wik
 
 This time implement a `times` type for multiplication.
 Again, see [Peano Arithmetic](http://en.wikipedia.org/wiki/Peano_axioms#Arithmetic) if you get stuck.
+Make a `*` operator once you have `times` implemented correctly.
 
 ### nat-3
 
