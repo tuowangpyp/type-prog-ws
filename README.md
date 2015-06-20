@@ -99,7 +99,7 @@ Again, you should be able to add `Imp` without changing `True` or `False`.
 I don't know about you, but code like `True#Or[False]` is quite ugly.
 We can do a lot better with types.
 Types which take two arguments can be written as an infix operator.
-Define types `\/`, `/\`, and `==>` to alias `Or`, `And`, and `Imp` respectively.
+Define types `\/`, `/\`, and `->` to alias `Or`, `And`, and `Imp` respectively.
 
 ## Nat Exercises
 
