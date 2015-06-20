@@ -1,6 +1,7 @@
 package com.joescii.typeprog
 
 import TypeLists._
+import Nat._
 
 object TList4Spec {
   type Nat1 = NatN[Nat0]
@@ -10,8 +11,8 @@ object TList4Spec {
   type Nat6 = NatN[NatN[Nat4]]
 
   type List1 = Nat2 :+: Nat1 :+: Nat0 :+: Nat1 :+: NTNil
-  implicitly[List1#fold[Nat0, ({type F[a <: Nat, b <: Nat] = a#plus[b]})#F] =:= Nat4]
+  implicitly[List1#fold[Nat0, ({type F[a <: Nat, b <: Nat] = a + b})#F] =:= Nat4]
 
   type List2 = Nat1 :+: Nat1 :+: Nat3 :+: Nat2 :+: Nat1 :+: NTNil
-  implicitly[List2#fold[Nat1, ({type F[a <: Nat, b <: Nat] = a#times[b]})#F] =:= Nat6]
+  implicitly[List2#fold[Nat1, ({type F[a <: Nat, b <: Nat] = a * b})#F] =:= Nat6]
 }

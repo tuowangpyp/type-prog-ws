@@ -1,6 +1,7 @@
 package com.joescii.typeprog
 
 import TypeLists._
+import Nat._
 
 object TList3Spec {
   type Nat1 = NatN[Nat0]
@@ -26,7 +27,7 @@ object TList3Spec {
   type List3 = Nat2 :+: Nat3 :+: Nat4 :+: NTNil
 
   implicitly[List1#map[({type F[i <: Nat] = NatN[NatN[i]]})#F] =:= List3]
-  implicitly[List1#map[({type F[i <: Nat] = i#plus[Nat2]})#F]  =:= List3]
+  implicitly[List1#map[({type F[i <: Nat] = i + Nat2})#F]      =:= List3]
 
   // HINT:
   // Thus far we have always accepted Nat types as type parameters with the syntax t[That <: Nat].
