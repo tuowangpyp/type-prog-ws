@@ -15,4 +15,5 @@ sealed trait NatN[Prev <: Nat] extends Nat {
 
 object Nat {
   type +[A <: Nat, B <: Nat] = A#plus[B]
+  type *[A <: Nat, B <: Nat] = A#times[B]
 }
