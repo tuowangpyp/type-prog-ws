@@ -20,7 +20,3 @@ sealed trait ::[H <: Nat, T <: TypeList] extends TypeList {
   type map[F[_ <: Nat] <: Nat] = F[H] :: T#map[F]
   type fold[A <: Nat, F[_ <: Nat, _ <: Nat] <: Nat] = F[H, T#fold[A, F]]
 }
-
-object TypeList {
-  type map[T <: TypeList, F[_ <: Nat] <: Nat] = T#map[F]
-}
