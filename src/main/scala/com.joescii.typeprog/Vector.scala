@@ -1,10 +1,12 @@
 package com.joescii.typeprog
 
+import Nat._
+
 sealed trait Vector[Size <: Nat] {
   def size:Int
   def ::(head:Int):Vector[NatN[Size]] = NonEmptyVector(head, this)
   def +(that:Vector[Size]):Vector[Size]
-  def ++[ThatSize <: Nat](that:Vector[ThatSize]):Vector[Size#plus[ThatSize]]
+  def ++[ThatSize <: Nat](that:Vector[ThatSize]):Vector[Size + ThatSize]
 }
 
 case object VNil extends Vector[Nat0] {
