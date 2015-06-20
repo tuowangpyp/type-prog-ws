@@ -12,3 +12,7 @@ sealed trait NatN[Prev <: Nat] extends Nat {
   type plus[That <: Nat] = NatN[Prev#plus[That]]
   type times[That <: Nat] = That#plus[That#times[Prev]]
 }
+
+object Nat {
+
+}
