@@ -17,7 +17,3 @@ sealed trait ::[H <: Nat, T <: TypeList] extends TypeList {
   type reduce = H + (T#reduce)
   type map[F[_ <: Nat] <: Nat] = F[H] :: T#map[F]
 }
-
-object TypeList {
-  type map[T <: TypeList, F[_ <: Nat] <: Nat] = T#map[F]
-}
