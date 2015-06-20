@@ -15,3 +15,8 @@ sealed trait False extends Bool {
   type Or[That <: Bool] = That
 }
 
+object Bool {
+  type \/ [A <: Bool, B <: Bool] = A#Or[B]
+  type /\ [A <: Bool, B <: Bool] = A#And[B]
+  type ==>[A <: Bool, B <: Bool] = A#Imp[B]
+}
