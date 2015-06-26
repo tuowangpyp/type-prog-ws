@@ -9,5 +9,6 @@ class EnvironmentSpecs extends FlatSpec with Matchers {
 
   "The failing test" should "be red" in {
     42 should be (42)
+
   }
 }
